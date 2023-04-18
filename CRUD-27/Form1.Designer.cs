@@ -36,10 +36,12 @@
             this.delete = new System.Windows.Forms.Button();
             this.rese = new System.Windows.Forms.Button();
             this.mod = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.price2 = new System.Windows.Forms.TextBox();
             this.name2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.nnome = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.del = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Name
@@ -116,14 +118,6 @@
             this.mod.UseVisualStyleBackColor = true;
             this.mod.Click += new System.EventHandler(this.mod_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(343, 195);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // price2
             // 
             this.price2.Location = new System.Drawing.Point(150, 195);
@@ -150,16 +144,46 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "New Prezzo";
             // 
+            // nnome
+            // 
+            this.nnome.Location = new System.Drawing.Point(343, 194);
+            this.nnome.Name = "nnome";
+            this.nnome.Size = new System.Drawing.Size(100, 20);
+            this.nnome.TabIndex = 13;
+            this.nnome.TextChanged += new System.EventHandler(this.nnome_TextChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(538, 60);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(222, 347);
+            this.listView1.TabIndex = 14;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // del
+            // 
+            this.del.Location = new System.Drawing.Point(378, 132);
+            this.del.Name = "del";
+            this.del.Size = new System.Drawing.Size(75, 23);
+            this.del.TabIndex = 15;
+            this.del.Text = "Elimina File";
+            this.del.UseVisualStyleBackColor = true;
+            this.del.Click += new System.EventHandler(this.del_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.del);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.nnome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.name2);
             this.Controls.Add(this.price2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mod);
             this.Controls.Add(this.rese);
             this.Controls.Add(this.delete);
@@ -186,10 +210,12 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button rese;
         private System.Windows.Forms.Button mod;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox price2;
         private System.Windows.Forms.Label name2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox nnome;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button del;
     }
 }
 
