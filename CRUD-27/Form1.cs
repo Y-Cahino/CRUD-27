@@ -22,7 +22,7 @@ namespace CRUD_27
             public string n;
             public float pr;
         }
-        public static Prodotto[] p;
+        public Prodotto[] p;
         public static int d;
         string f,l;
         public Form1()
@@ -96,10 +96,10 @@ namespace CRUD_27
         }
         #endregion
         #region funzioni
-        public static string ToString(Prodotto p, int d)
+        public static string ToString(Prodotto[] p, int d)
         {
             string sep = ";";
-            return (p.n + sep + p.pr);
+            return (p[d].n + sep + p[d].pr);
 
         }
         public static void scriviAppend(string l, string f)
@@ -112,13 +112,13 @@ namespace CRUD_27
         public static int cercaSuFile(string f, string input, ref int l)
         {
             StreamReader sr = new StreamReader(f);
-            string line = "";
+            string linea = "";
             l = 0;
 
             while (!sr.EndOfStream)
             {
-                line = sr.ReadLine();
-                String[] split = line.Split(';');
+                linea = sr.ReadLine();
+                String[] split = linea.Split(';');
 
                 if (split[0] == input)
                 {
