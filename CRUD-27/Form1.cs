@@ -92,7 +92,8 @@ namespace CRUD_27
         }
         private void del_Click(object sender, EventArgs e)
         {
-
+            File.Delete(f);
+            Console.Clear();
         }
         #endregion
         #region funzioni
